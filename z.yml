@@ -1,0 +1,11 @@
+---
+- name: zone
+  hosts: checkpoint
+  tasks:
+   - name: add-security-zone
+     cp_mgmt_security_zone:
+      color: "{{ colour }}"
+      comments: "{{ comment }}"
+      name: "{{ nameofzone }}"
+      state: present
+      auto_publish_session: true
